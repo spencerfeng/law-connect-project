@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Bash(printf 'No\\\\nNo\\\\n')",
+      "Read(//Users/spencerfeng/code/**)",
+      "Bash(yes n:*)",
+      "Bash(cp -r /Users/spencerfeng/code/temp-scaffold/. /Users/spencerfeng/code/law-connect-project/)",
+      "Bash(rm -rf /Users/spencerfeng/code/temp-scaffold)",
+      "Bash(npm install:*)",
+      "Bash(yes)"
+    ]
+  }
+}
