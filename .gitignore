@@ -47,3 +47,6 @@ sqlite.db-wal
 
 # drizzle
 drizzle/meta/
+
+# claude
+.claude/settings.local.json
