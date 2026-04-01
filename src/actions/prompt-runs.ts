@@ -5,9 +5,9 @@ import { v4 as uuidv4 } from "uuid"
 import { eq } from "drizzle-orm"
 import { db } from "@/db"
 import { promptRuns, generatedItems } from "@/db/schema"
-import { runPrompt } from "@/lib/llm"
+import { runPrompt, DEFAULT_MODEL, type ModelId } from "@/lib/llm"
 
-export async function createRun(prompt: string) {
+export async function createRun(prompt: string, modelId: ModelId = DEFAULT_MODEL) {
   const runId = uuidv4()
 
   await db.insert(promptRuns).values({
@@ -17,7 +17,7 @@ export async function createRun(prompt: string) {
   })
 
   try {
-    const items = await runPrompt(prompt)
+    const items = await runPrompt(prompt, modelId)
 
     await db.insert(generatedItems).values(
       items.map((item) => ({
