@@ -1,4 +1,4 @@
-# LawConnect Take-Home: LLM-Driven Web App
+# LawConnect: LLM-Driven Web App
 
 ## Code Style
 - No trailing semicolons
